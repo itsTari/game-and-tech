@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game and Tech Festival</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper form-header">
+            <div class="logo"><img src="images/tech_image-removebg-preview.png"></div>
+            <div class="ul">
+                <a href="index.html"><img src="images/back (1).png"></a>
+            </div>
+            
+        </div>
+    </header>
+    <section class="form">
+        <a class="mobile-cancel"  href="index.html"><img src="images/back (1).png"></a>
+        <div class="booking">
+            <h1 class="booking-h1">GAME AND TECH FEST REGISTRATION FORM</h1>
+            <p class="booking-p">If you would like to take part in our event, please fill in your details<br>
+                in the Event Registration Form below and you will be automatically<br> 
+                registered. Event registration must be sumbited at least six (6) days<br>
+                prior to the event.
+            </p>
+            <form action="config.php" method="post">
+                <div class="email-phone">
+                    <span>
+                        <p class="hide-p">First Name</p>
+                        <input type="text" class="small" placeholder="first name" name="fullname" id="fullname">
+                    </span>
+                    <span>
+                        <p class="hide-p">Last Name</p>
+                        <input type="text" class="small" placeholder="last name" name="fullname" id="fullname">
+                    </span>
+                    
+                </div>
+                <div class="email-phone">
+                    <span>
+                        <p>Email</p>
+                        <input type="email" class="small" placeholder="bayelsatechhub@gmail"  name="email" id="email">
+                    </span>
+                    <span>
+                        <p>Phone</p>
+                        <input type="number" class="small" placeholder="#### #### ###"  name="number" id="number">
+                    </span>
+                    
+                </div>
+                <div>
+                    <p>How many friend's will you bring along?</p>
+                    <select>
+                        <!-- <option>none</option> -->
+                        <option name="one" id="one">1</option>
+                        <!-- <option>2</option> -->
+                        <!-- <option>3</option> -->
+                        <!-- <option>4</option> -->
+                        <!-- <option>5</option> -->
+                        <!-- <option>5 or more</option> -->
+                    </select>
+                </div>
+                <div>
+                    <p>Are you a techie</p>
+                    <select class="select" onchange="showDiv()">
+                        <option value="0" name="no" id="no">No</option>
+                        <option value="1" name="yes" id="yes">Yes</option>
+                    </select>
+                </div>
+                <div class="hidden-div">
+                    <p> Select your area of specialization</p>
+                    <select>
+                        <option>Technical Writing</option>
+                        <option>Project Management</option>
+                        <option>Data Analysis</option>
+                        <option>Web Development</option>
+                        <option>Product Design</option>
+                        <option>Mobile Development</option>
+                        <option>Cybersecurity</option>
+                        <option>Cloud Technology</option>
+                        <option>Robotic Process Automation</option>
+                        <option>Blockchain Technology</option>
+                        <option>DevOps</option>
+                    </select>
+                </div>
+                <div>
+                    <p>How did you hear about game and tech</p>
+                    <p><input type="checkbox"> Friends/Colleague</p>
+                    <p><input type="checkbox"> Search engines</p>
+                    <p><input type="checkbox"> Tv</p>
+                    <p><input type="checkbox"> Advertisement</p>
+                    
+                </div>
+                <input type="submit" class="submit">
+            </form>
+        </div>
+    </section>
+    <script>
+
+        let hidden = document.querySelector(".hidden-div")
+        let correct = document.querySelector(".select")
+
+        hidden.style.display="none"
+        function showDiv(select){
+            if(correct.value == 1){
+                hidden.style.display="block"
+            }else{
+                 hidden.style.display="none"
+            }
+        }
+   
+    </script>
+</body>
+</html>
